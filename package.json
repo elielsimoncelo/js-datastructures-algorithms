@@ -1,0 +1,26 @@
+{
+  "name": "js-datastructures-algorithms",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "clean": "npx rimraf -rf dist/",
+    "copy": "copyfiles -f src/*.html dist/",
+    "build": "npm run clean && npm run copy && npx babel src/ -d dist/",
+    "start": "npx http-server",
+    "server": "npm run build && npx http-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.17.0",
+    "@babel/core": "^7.17.0",
+    "@babel/node": "^7.16.8",
+    "@babel/preset-env": "^7.16.11",
+    "copyfiles": "^2.4.1",
+    "esm": "^3.2.25",
+    "http-server": "^14.1.0",
+    "rimraf": "^3.0.2"
+  }
+}
